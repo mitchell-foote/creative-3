@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Secret Ident Maker</title>
+	<meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="App.css" rel="stylesheet" />
+</head>
+<body ng-app="app" ng-controller="mainCtrl">
+    <nav class="navbar navbar-light bg-faded">
+        <div class="navbar-brand">Secret Identity Creator</div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                <!-- Put the form in this area -->
+                <form ng-submit="findRandomIdent()">
+                    <div class="form-group">
+                        <label for="seed">Seed</label>
+                        <input ng-model="seed" class="form-control" type="text" id="seed" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Nation-Code">Nation Code</label>
+                        <select ng-model="countryCode" class="form-control" id="Nation-Code">
+                            <option>AU</option>
+                            <option>BR</option>
+                            <option>CA</option>
+                            <option>CH</option>
+                            <option>DE</option>
+                            <option>DK</option>
+                            <option>ES</option>
+                            <option>FI</option>
+                            <option>FR</option>
+                            <option>GB</option>
+                            <option>IE</option>
+                            <option>IR</option>
+                            <option>NL</option>
+                            <option>NZ</option>
+                            <option>TR</option>
+                            <option selected>US</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" ng-model="gender" type="radio" name="gender" id="male-gender" value="male" />
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" ng-model="gender" type="radio" name="gender" id="female-gender" value="female" />
+                                Female
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-9">
+                <!-- Put the data in this area -->
+                {{ident.name}}
+            </div>
+        </div>
+        
+    </div>
+    <script src="App.js"></script>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+</body>
+</html>
