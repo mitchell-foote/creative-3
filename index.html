@@ -58,11 +58,19 @@
                 </form>
             </div>
             <div class="col-sm-9">
-                <!-- Put the data in this area -->
-                {{ident.name}}
+                <ul class="identity">
+                    <li><img ng-src="{{ident.pictureURL}}"></li>
+                    <li>Name: {{ident.name}}</li>
+                    <li>Address: {{ident.street}}</li>
+                    <li>City: {{ident.city}}</li>
+                    <li>State: {{ident.state}}</li>
+                    <li>Postal Code: {{ident.postCode}}</li>
+                    <li>Email Address: {{ident.email}}</li>
+                    <li>Date of Birth: {{ident.dateOfBirth}}</li>
+                    <li>Phone Number: {{ident.phone}}</li>
+                </ul>
             </div>
         </div>
-        
     </div>
     <script src="App.js"></script>
     <script src="Scripts/jquery-1.9.1.js"></script>
