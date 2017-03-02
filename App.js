@@ -21,7 +21,7 @@ function mainCtrl($scope) {
         });
     };
     $scope.ident = {};
-    $scope.ident.pictureURL = "./Images/default.png";
+    $scope.ident.pictureURL = "Images/default.png";
 }
 
 var baseURL = "https://randomuser.me/api";
