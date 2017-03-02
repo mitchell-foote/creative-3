@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Secret Ident Maker</title>
+    <title>Secret Identity Creator</title>
 	<meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -64,17 +64,19 @@
                 </form>
             </div>
             <div class="col-sm-9">
-                <ul class="identity">
-                    <li><img ng-src="{{ident.pictureURL}}"></li>
-                    <li>Name: {{ident.name}}</li>
-                    <li>Address: {{ident.street}}</li>
-                    <li>City: {{ident.city}}</li>
-                    <li>State: {{ident.state}}</li>
-                    <li>Postal Code: {{ident.postCode}}</li>
-                    <li>Email Address: {{ident.email}}</li>
-                    <li>Date of Birth: {{ident.dateOfBirth}}</li>
-                    <li>Phone Number: {{ident.phone}}</li>
-                </ul>
+                <div class="identity">
+                    <img ng-src="{{ident.pictureURL}}">
+                    <ul class="info">
+                        <li><span class="title">Name:</span> {{ident.name}}</li>
+                        <li><span class="title">Address:</span> {{ident.street}}</li>
+                        <li><span class="title">City:</span> {{ident.city}}</li>
+                        <li><span class="title">State:</span> {{ident.state}}</li>
+                        <li><span class="title">Postal Code:</span> {{ident.postCode}}</li>
+                        <li><span class="title">Email Address:</span> {{ident.email}}</li>
+                        <li><span class="title">Date of Birth:</span> {{ident.dateOfBirth}}</li>
+                        <li><span class="title">Phone Number:</span> {{ident.phone}}</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
