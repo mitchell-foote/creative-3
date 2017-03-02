@@ -43,7 +43,7 @@ function mainCtrl($scope) {
         });
     };
     $scope.ident = new newIdentCurrent();
-    $scope.ident.pictureURL = "./Images/default.png";
+    $scope.ident.pictureURL = "Images/default.png";
 }
 
 
