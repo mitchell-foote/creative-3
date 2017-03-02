@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html style="height:100%">
 <head>
     <title>Secret Identity Creator</title>
 	<meta charset="utf-8" />
@@ -7,15 +7,15 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="App.css" rel="stylesheet" />
 </head>
-<body ng-app="app" ng-controller="mainCtrl">
-    <nav class="navbar navbar-light bg-faded">
+<body class="totalBackgroundImage" ng-app="app" ng-controller="mainCtrl">
+    <nav style="background-image:url('Images/paper-texture.jpg')" class="navbar navbar-light bg-faded">
         <div class="navbar-brand">Secret Identity Creator</div>
     </nav>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-3">
                 <!-- Put the form in this area -->
-                <form ng-submit="findNewIdent()">
+                <form class="identity info"style="padding:1em" ng-submit="findNewIdent()">
                     <h6 class="text-center">Input a seed value, or input gender and nation info.</h6>
                     <div class="form-group">
                         <label for="seed">Seed</label>
@@ -57,26 +57,29 @@
                             </label>
                         </div>
                     </div>
-                    <div class="btn-group">
-                        <button type="submit" class="btn btn-outline-primary">Get New Identity</button>
-                        <button type="button" ng-click="findRandomIdent()" class="btn btn-outline-primary">Find Random Identity</button>
-                    </div>
+                    
+                        <button type="submit" class="btn btn-outline-primary btn-block">Get New Identity</button>
+                        <button type="button" ng-click="findRandomIdent()" class="btn btn-outline-primary btn-block">Find Random Identity</button>
+                    
                 </form>
             </div>
             <div class="col-sm-9">
-                <div class="identity">
-                    <img ng-src="{{ident.pictureURL}}">
-                    <ul class="info">
-                        <li><span class="title">Name:</span> {{ident.name}}</li>
-                        <li><span class="title">Address:</span> {{ident.street}}</li>
-                        <li><span class="title">City:</span> {{ident.city}}</li>
-                        <li><span class="title">State:</span> {{ident.state}}</li>
-                        <li><span class="title">Postal Code:</span> {{ident.postCode}}</li>
-                        <li><span class="title">Email Address:</span> {{ident.email}}</li>
-                        <li><span class="title">Date of Birth:</span> {{ident.dateOfBirth}}</li>
-                        <li><span class="title">Phone Number:</span> {{ident.phone}}</li>
-                    </ul>
+                <div class="centerInSpace">
+                    <div class="identity">
+                        <img ng-src="{{ident.pictureURL}}">
+                        <ul class="info">
+                            <li><span class="title">Name:</span> {{ident.name}}</li>
+                            <li><span class="title">Address:</span> {{ident.street}}</li>
+                            <li><span class="title">City:</span> {{ident.city}}</li>
+                            <li><span class="title">State:</span> {{ident.state}}</li>
+                            <li><span class="title">Postal Code:</span> {{ident.postCode}}</li>
+                            <li><span class="title">Email Address:</span> {{ident.email}}</li>
+                            <li><span class="title">Date of Birth:</span> {{ident.dateOfBirth}}</li>
+                            <li><span class="title">Phone Number:</span> {{ident.phone}}</li>
+                        </ul>
+                    </div>
                 </div>
+                
             </div>
         </div>
     </div>
